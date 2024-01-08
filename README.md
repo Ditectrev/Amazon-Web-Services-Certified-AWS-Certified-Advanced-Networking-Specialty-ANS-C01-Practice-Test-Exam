@@ -41,11 +41,11 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ## Who this course is for:
 
 - 👨‍🎓 Students preparing for the Amazon Web Services Certified (AWS Certified) Advanced Networking Specialty (ANS-C01) Exam;
+- 👨‍🎓 Amazon Web Services (AWS) Engineers;
 - 👨‍🎓 Cloud Architects;
 - 👨‍🎓 Cloud Engineers;
 - 👨‍🎓 DevOps Engineers;
 - 👨‍🎓 Enterprise Architects;
-- 👨‍🎓 Amazon Web Services (AWS) Engineers;
 - 👨‍🎓 Infrastructure Engineers;
 - 👨‍🎓 Network Engineers;
 - 👨‍🎓 Security Engineers;
@@ -600,7 +600,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [ ] Set the BGP community tag for all prefixes from the primary data center to 7224:7100. Set the BGP community tag for all prefixes from the failover data center to 7224:7300.
 - [x] Set the BGP community tag for all prefixes from the primary data center to 7224:7300. Set the BGP community tag for all prefixes from the failover data center to 7224:7100.
 - [ ] Set the BGP community tag for all prefixes from the primary data center to 7224:9300. Set the BGP community tag for all prefixes from the failover data center to 7224:9100.
-- [ ] Set the BGP community tag for all prefixes from the primary data center to 7224:9100. Set the BGP community tag for all prefixes from the failover data center to 7224:9300
+- [ ] Set the BGP community tag for all prefixes from the primary data center to 7224:9100. Set the BGP community tag for all prefixes from the failover data center to 7224:9300.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -735,9 +735,9 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 ### A company has its production VPC (VPC-A) in the eu-west-1 Region in Account 1. VPC-A is attached to a transit gateway (TGW-A) that is connected to an on-premises data center in Dublin, Ireland, by an AWS Direct Connect transit VIF that is configured for an AWS Direct Connect gateway. The company also has a staging VPC (VPC-B) that is attached to another transit gateway (TGW-B) in the eu-west-2 Region in Account 2. A network engineer must implement connectivity between VPC-B and the on-premises data center in Dublin. Which solutions will meet these requirements? (Choose two.)
 
 - [ ] Configure inter-Region VPC peering between VPC-A and VPC-B. Add the required VPC peering routes. Add the VPC-B CIDR block in the allowed prefixes on the Direct Connect gateway association.
-- [ ] Associate TGW-B with the Direct Connect gateway. Advertise the VPC-B CIDR block under the allowed prefixes.
+- [x] Associate TGW-B with the Direct Connect gateway. Advertise the VPC-B CIDR block under the allowed prefixes.
 - [ ] Configure another transit VIF on the Direct Connect connection and associate TGW-B. Advertise the VPC-B CIDR block under the allowed prefixes.
-- [ ] Configure inter-Region transit gateway peering between TGW-A and TGW-B. Add the peering routes in the transit gateway route tables. Add both the VPC-A and the VPC-B CIDR block under the allowed prefix list in the Direct Connect gateway association.
+- [x] Configure inter-Region transit gateway peering between TGW-A and TGW-B. Add the peering routes in the transit gateway route tables. Add both the VPC-A and the VPC-B CIDR block under the allowed prefix list in the Direct Connect gateway association.
 - [ ] Configure an AWS Site-to-Site VPN connection over the transit VIF to TGW-B as a VPN attachment.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -910,65 +910,37 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 ### A gaming company is planning to launch a globally available game that is hosted in one AWS Region. The game backend is hosted on Amazon EC2 instances that are part of an Auto Scaling group. The game uses the gRPC protocol for bidirectional streaming between game clients and the backend. The company needs to filter incoming traffic based on the source IP address to protect the game. Which solution will meet these requirements?
 
-- [x] Configure an AWS Global Accelerator accelerator with an Application Load Balancer (ALB) endpoint.
-Attach the ALB to the Auto Scaling group. Configure an AWS WAF web ACL for the ALB to filter traffic
-based on the source IP address.
-- [ ] Configure an AWS Global Accelerator accelerator with a Network Load Balancer (NLB) endpoint. Attach
-the NLB to the Auto Scaling group. Configure security groups for the EC2 instances to filter traffic based
-on the source IP address.
-- [ ] Configure an Amazon CloudFront distribution with an Application Load Balancer (ALB) endpoint. Attach
-the ALB to the Auto Scaling group. Configure an AWS WAF web ACL for the ALB to filter traffic based on
-the source IP address.
-- [ ] Configure an Amazon CloudFront distribution with a Network Load Balancer (NLB) endpoint. Attach the
-NLB to the Auto Scaling group. Configure security groups for the EC2 instances to filter traffic based on
-the source IP address.
+- [x] Configure an AWS Global Accelerator accelerator with an Application Load Balancer (ALB) endpoint. Attach the ALB to the Auto Scaling group. Configure an AWS WAF web ACL for the ALB to filter traffic based on the source IP address.
+- [ ] Configure an AWS Global Accelerator accelerator with a Network Load Balancer (NLB) endpoint. Attach the NLB to the Auto Scaling group. Configure security groups for the EC2 instances to filter traffic based on the source IP address.
+- [ ] Configure an Amazon CloudFront distribution with an Application Load Balancer (ALB) endpoint. Attach the ALB to the Auto Scaling group. Configure an AWS WAF web ACL for the ALB to filter traffic based on the source IP address.
+- [ ] Configure an Amazon CloudFront distribution with a Network Load Balancer (NLB) endpoint. Attach the NLB to the Auto Scaling group. Configure security groups for the EC2 instances to filter traffic based on the source IP address.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A company has multiple VPCs in the us-east-1 Region. The company has deployed a website in one ofthe VPCs. The company wants to implement split-view DNS so that the website is accessible internallyfrom the VPCs and externally over the internet with the same domain name, example.com. Which solution will meet these requirements?
 
-- [ ] Change the DHCP options for each VPC to use the IP address of an on-premises DNS server. Create a
-private hosted zone and a public hosted zone for example.com. Map the private hosted zone to the
-website's internal IP address. Map the public hosted zone to the website's external IP address.
-- [x] Create Amazon Route 53 private hosted zones and public hosted zones that have the same name,
-example.com. Associate the VPCs with the private hosted zone. Create records in each hosted zone that
-determine how traffic is routed.
-- [ ] Create an Amazon Route 53 Resolver inbound endpoint for resolving example.com internally. Create a
-Route 53 public hosted zone for routing external DNS queries.
-- [ ] Create an Amazon Route 53 Resolver outbound endpoint for resolving example.com externally. Create a
-Route 53 private hosted zone for routing internal DNS queries.
+- [ ] Change the DHCP options for each VPC to use the IP address of an on-premises DNS server. Create a private hosted zone and a public hosted zone for example.com. Map the private hosted zone to the website's internal IP address. Map the public hosted zone to the website's external IP address.
+- [x] Create Amazon Route 53 private hosted zones and public hosted zones that have the same name, example.com. Associate the VPCs with the private hosted zone. Create records in each hosted zone that determine how traffic is routed.
+- [ ] Create an Amazon Route 53 Resolver inbound endpoint for resolving example.com internally. Create a Route 53 public hosted zone for routing external DNS queries.
+- [ ] Create an Amazon Route 53 Resolver outbound endpoint for resolving example.com externally. Create a Route 53 private hosted zone for routing internal DNS queries.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A company has developed a new web application that processes confidential data that is hosted onAmazon EC2 instances. The application needs to scale and must use certificates to authenticate clients. The application is configured to request a client's certificate and will validate the certificate as part of the initial handshake. Which Elastic Load Balancing (ELB) solution will meet these requirements?
 
-- [ ] Configure an Application Load Balancer (ALB) that includes an HTTPS listener on port 443. Create an
-Auto Scaling group for the EC2 instances. Configure the Auto Scaling group as the target group of the
-ALB. Configure HTTPS as the protocol for the target group.
-- [ ] Configure a Network Load Balancer (NLB) that includes a TLS listener on port 443. Create an Auto
-Scaling group for the EC2 instances. Configure the Auto Scaling group as the target group of the NLB.
-Configure the NLB to terminate TLS. Configure TLS as the protocol for the target group.
-- [ ] Configure a Network Load Balancer (NLB) that includes a TCP listener on port 443. Create an Auto
-Scaling group for the EC2 instances. Configure the Auto Scaling group as the target group of the NLB.
-Configure TCP as the protocol for the target group.
-- [x] Configure an Application Load Balancer (ALB) that includes a TLS listener on port 443. Create an Auto
-Scaling group for the EC2 instances. Configure the Auto Scaling group as the target group of the ALB.
-Configure TLS as the protocol for the target group.
+- [ ] Configure an Application Load Balancer (ALB) that includes an HTTPS listener on port 443. Create an Auto Scaling group for the EC2 instances. Configure the Auto Scaling group as the target group of the ALB. Configure HTTPS as the protocol for the target group.
+- [ ] Configure a Network Load Balancer (NLB) that includes a TLS listener on port 443. Create an Auto Scaling group for the EC2 instances. Configure the Auto Scaling group as the target group of the NLB. Configure the NLB to terminate TLS. Configure TLS as the protocol for the target group.
+- [ ] Configure a Network Load Balancer (NLB) that includes a TCP listener on port 443. Create an Auto Scaling group for the EC2 instances. Configure the Auto Scaling group as the target group of the NLB. Configure TCP as the protocol for the target group.
+- [x] Configure an Application Load Balancer (ALB) that includes a TLS listener on port 443. Create an Auto Scaling group for the EC2 instances. Configure the Auto Scaling group as the target group of the ALB. Configure TLS as the protocol for the target group.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A company collects a high volume of shipping data and stores the data in an on-premises data center. A network engineer wants to use Amazon S3 to store the data during the first phase of a migration to AWS. During this phase, an application that resides in the data center will need to access the dataprivately in an S3 bucket that the company created. The company has set up an AWS Direct Connect connection with a private VIF to connect theon-premises data center to a VPC. The network engineer plans to use this Direct Connect connection forthe hybrid cloud setup. The solution must be highly available. What should the network engineer do next to implement this architecture?
 
-- [ ] Configure an S3 gateway endpoint in the VPC. Update VPC route tables to route traffic to the S3 gateway
-endpoint. Configure the S3 gateway endpoint DNS name in the on-premises application.
-- [x] Configure an S3 interface endpoint in the VPC. Configure the S3 interface endpoint DNS name in the
-on-premises application.
-- [ ] Configure an S3 gateway endpoint in the VPC. Update VPC route tables to route traffic to the S3 gateway
-endpoint. Configure an HTTP proxy on an Amazon EC2 instance in the VPC to route traffic to the S3
-gateway endpoint. Configure the HTTP proxy DNS name in the on-premises application.
-- [ ] Configure an S3 interface endpoint in the VPC. Update VPC route tables to route traffic to the S3
-interface endpoint. Configure an HTTP proxy on an Amazon EC2 instance in the VPC to route traffic to
-the S3 interface endpoint. Configure the HTTP proxy DNS name in the on-premises application.
+- [ ] Configure an S3 gateway endpoint in the VPC. Update VPC route tables to route traffic to the S3 gateway endpoint. Configure the S3 gateway endpoint DNS name in the on-premises application.
+- [x] Configure an S3 interface endpoint in the VPC. Configure the S3 interface endpoint DNS name in the on-premises application.
+- [ ] Configure an S3 gateway endpoint in the VPC. Update VPC route tables to route traffic to the S3 gateway endpoint. Configure an HTTP proxy on an Amazon EC2 instance in the VPC to route traffic to the S3 gateway endpoint. Configure the HTTP proxy DNS name in the on-premises application.
+- [ ] Configure an S3 interface endpoint in the VPC. Update VPC route tables to route traffic to the S3 interface endpoint. Configure an HTTP proxy on an Amazon EC2 instance in the VPC to route traffic to the S3 interface endpoint. Configure the HTTP proxy DNS name in the on-premises application.
 
 **[⬆ Back to Top](#table-of-contents)**
 
@@ -983,38 +955,27 @@ the S3 interface endpoint. Configure the HTTP proxy DNS name in the on-premises 
 
 ### A company hosts a public hosted zone in Amazon Route 53. The company wants to configure DNS Security Extensions (DNSSEC) signing for the public hosted zone. All the company's business-critical applications are running in the us-west-2 Region. The company has created a symmetric, customer managed, single-Region key in us-west-2 by using AWS Key Management Service (AWS KMS). A network engineer finds that the existing AWS KMS key cannot be used to create a key-signing key (KSK). How can the network engineer resolve this issue?
 
-- [ ] Recreate a symmetric, customer managed, multi-Region key in the us-east-1 Region. Use this key to
-create a KSK.
+- [ ] Recreate a symmetric, customer managed, multi-Region key in the us-east-1 Region. Use this key to create a KSK.
 - [ ] Recreate a symmetric, customer managed, single-Region key in us-west-2. Use this key to create a KSK.
-- [x] Recreate an asymmetric, customer managed key with an ECC_NIST_P256 key spec in the us-east-1
-Region. Use this key to create a KSK.
-- [ ] Recreate an asymmetric, customer managed key with an ECC_NIST_P256 key spec in us-west-2. Use
-this key to create a KSK.
+- [x] Recreate an asymmetric, customer managed key with an ECC_NIST_P256 key spec in the us-east-1 Region. Use this key to create a KSK.
+- [ ] Recreate an asymmetric, customer managed key with an ECC_NIST_P256 key spec in us-west-2. Use this key to create a KSK.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A company is migrating many applications from two on-premises data centers to AWS. The company's network team is setting up connectivity to the AWS environment. The migration will involve spreading the applications across two AWS Regions: us-east-1 and us-west-2. The company has set up AWS Direct Connect connections at two different locations. Direct Connect connection 1 is to the first data center and is at a location in us-east-1. Direct Connect connection 2 is to the second data center and is at a location in us-west-2. The company has connected both Direct Connect connections to a single Direct Connect gateway by using transit VIFs. The Direct Connect gateway is associated with transit gateways that are deployed in each Region. All traffic to and from AWS must travel through the first data center. In the event of failure, the second data center must take over the traffic. How should the network team configure BGP to meet these requirements?
 
-- [x] Configure the local preference BGP community tag 7224:7300 for the transit VIF connected to Direct
-Connect connection 1.
-- [ ] Configure the local preference BGP community tag 7224:9300 for the transit VIF connected to Direct
-Connect connection 2.
-- [ ] Use the AS_PATH attribute to prepend the additional hop for the transit VIF connected to Direct Connect
-connection 2.
-- [ ] Use the AS_PATH attribute to prepend the additional hop for the transit VIF connected to Direct Connect
-connection 1.
+- [x] Configure the local preference BGP community tag 7224:7300 for the transit VIF connected to Direct Connect connection 1.
+- [ ] Configure the local preference BGP community tag 7224:9300 for the transit VIF connected to Direct Connect connection 2.
+- [ ] Use the AS_PATH attribute to prepend the additional hop for the transit VIF connected to Direct Connect connection 2.
+- [ ] Use the AS_PATH attribute to prepend the additional hop for the transit VIF connected to Direct Connect connection 1.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### An ecommerce company has a business-critical application that runs on Amazon EC2 instances in a VPC. The company's development team has been testing a new version of the application on test EC2 instances. The development team wants to test the new application version against production traffic to address any problems that might occur before the company releases the new version across all servers. Which solution will meet this requirement with no impact on the end user's experience?
 
-- [ ] Configure Amazon Route 53 weighted routing policies by configuring records that have the same name
-and type as each of the instances. Assign relative weights to the production instances and the test
-instances.
-- [ ] Create an Application Load Balancer with weighted target groups. Add more than one target group to the
-forward action of a listener rule. Specify a weight for each target group.
-- [x] Implement Traffic Mirroring to replay the production requests to the test instances. Configure the source
-as the production instances. Configure the target as the test instances.
+- [ ] Configure Amazon Route 53 weighted routing policies by configuring records that have the same name and type as each of the instances. Assign relative weights to the production instances and the test instances.
+- [ ] Create an Application Load Balancer with weighted target groups. Add more than one target group to the forward action of a listener rule. Specify a weight for each target group.
+- [x] Implement Traffic Mirroring to replay the production requests to the test instances. Configure the source as the production instances. Configure the target as the test instances.
 - [ ] Configure an NGINX proxy in front of the production servers. Use the NGINX mirroring capability.
 
 **[⬆ Back to Top](#table-of-contents)**
@@ -1024,20 +985,15 @@ as the production instances. Configure the target as the test instances.
 - [ ] Configure a BIND server with DNS filtering. Modify the DNS servers in the DHCP options set.
 - [x] Use Amazon Route 53 Resolver DNS Firewall. Configure a domain list with a rule group.
 - [ ] Use AWS Network Firewall with domain name filtering.
-- [ ] Configure an Amazon Route 53 Resolver outbound endpoint with rules to filter and block suspicious
-traffic.
+- [ ] Configure an Amazon Route 53 Resolver outbound endpoint with rules to filter and block suspicious traffic.
 
 **[⬆ Back to Top](#table-of-contents)**
 
 ### A company is using Amazon Route 53 Resolver for its hybrid DNS infrastructure. The company is using Route 53 Resolver forwarding rules for authoritative domains that are hosted on on-premises DNS servers. The company achieves hybrid network connectivity by using an AWS Site-to-Site VPNconnection. A new governance policy requires logging for DNS traffic that originates in the AWS Cloud. The policy also requires the company to query DNS traffic to identify the source IP address of the resources that thequery originated from, along with the DNS name that was requested. Which solution will meet these requirements?
 
-- [ ] Create VPC flow logs for all VPCs. Send the logs to Amazon CloudWatch Logs. Use CloudWatch Logs
-Insights to query the IP address and DNS name.
-- [x] Configure Route 53 Resolver query logging for all VPCs. Send the logs to Amazon CloudWatch Logs.
-Use CloudWatch Logs Insights to query the IP address and DNS name.
-- [ ] Configure DNS logging for the Site-to-Site VPN connection. Send the logs to an Amazon S3 bucket. Use
-Amazon Athena to query the IP address and DNS name.
-- [ ] Modify the existing Route 53 Resolver rules to configure logging. Send the logs to an Amazon S3 bucket.
-Use Amazon Athena to query the IP address and DNS name.
+- [ ] Create VPC flow logs for all VPCs. Send the logs to Amazon CloudWatch Logs. Use CloudWatch Logs Insights to query the IP address and DNS name.
+- [x] Configure Route 53 Resolver query logging for all VPCs. Send the logs to Amazon CloudWatch Logs. Use CloudWatch Logs Insights to query the IP address and DNS name.
+- [ ] Configure DNS logging for the Site-to-Site VPN connection. Send the logs to an Amazon S3 bucket. Use Amazon Athena to query the IP address and DNS name.
+- [ ] Modify the existing Route 53 Resolver rules to configure logging. Send the logs to an Amazon S3 bucket. Use Amazon Athena to query the IP address and DNS name.
 
 **[⬆ Back to Top](#table-of-contents)**
