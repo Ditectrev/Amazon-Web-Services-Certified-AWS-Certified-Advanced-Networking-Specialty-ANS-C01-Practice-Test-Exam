@@ -19,9 +19,22 @@
 1. Always happy to answer your questions on Udemy's Q&A's and outside :)
 2. Failed? Please submit a screenshot of your exam result and request a refund (via our upcoming platform, not possible on Udemy); we'll always accept it.
 3. Learn about topics, such as:
-   - Application Load Balancer;
-   - Network Load Balancer;
-   - ...
+   - Amazon CloudFront;
+   - Amazon CloudWatch;
+   - Amazon Elastic Compute Cloud (Amazon EC2);
+   - Amazon Route 53;
+   - Amazon Simple Storage Service (Amazon S3);
+   - Amazon Simple Queue Service (Amazon SQS);
+   - AWS Certificate Manager (ACM);
+   - AWS Direct Connect;
+   - Application Load Balancer (ALB);
+   - Border Gateway Protocol (BGP);
+   - Domain Name System (DNS);
+   - Network Address Translation (NAT);
+   - Network Load Balancer (NLB);
+   - Transmission Control Protocol (TCP);
+   - Virtual Private Clouds (VPC);
+   - Virtual Private Network (VPN);
    - **Much More!**
 4. Questions are similar to the actual exam, without duplications (like in other courses ;-)).
 5. The Practice Tests Exams simulate the actual exam's content, timing, and percentage required to pass the exam.
@@ -234,7 +247,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 
 - [ ] Create an internet gateway and a NAT gateway in the VPC. Add a route to the existing subnet route tables to point IPv6 traffic to the NAT gateway.
 - [x] Create an internet gateway and a NAT instance in the VPC. Add a route to the existing subnet route tables to point IPv6 traffic to the NAT instance.
-- [ ] Create an egress-only Internet gateway in the VPAdd a route to the existing subnet route tables to point IPv6 traffic to the egress-only internet gateway.
+- [ ] Create an egress-only Internet gateway in the VPC. Add a route to the existing subnet route tables to point IPv6 traffic to the egress-only internet gateway.
 - [ ] Create an egress-only internet gateway in the VPC. Configure a security group that denies all inbound traffic. Associate the security group with the egress-only internet gateway.
 
 **[⬆ Back to Top](#table-of-contents)**
