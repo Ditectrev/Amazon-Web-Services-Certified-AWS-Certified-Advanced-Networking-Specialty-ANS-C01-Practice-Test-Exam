@@ -62,6 +62,7 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - 👨‍🎓 Infrastructure Engineers;
 - 👨‍🎓 Network Engineers;
 - 👨‍🎓 Security Engineers;
+- 👨‍🎓 Site Reliability Engineers;
 - 👨‍🎓 Software Developers/Engineers;
 - 👨‍🎓 Solution Architects.
 
