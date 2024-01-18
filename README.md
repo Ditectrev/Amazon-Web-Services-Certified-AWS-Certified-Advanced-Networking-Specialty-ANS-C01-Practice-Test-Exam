@@ -711,6 +711,8 @@ We are so thankful for every contribution, which makes sure we can deliver top-n
 - [x] Enable TCP keepalive on the client EC2 instances with a value of less than 300 seconds.
 - [ ] Close idle TCP connections through the NAT gateway.
 
+**[⬆ Back to Top](#table-of-contents)**
+
 ### A company is using Amazon Route 53 Resolver for its hybrid DNS infrastructure. The company is using Route 53 Resolver forwarding rules for authoritative domains that are hosted on on-premises DNS servers. The company achieves hybrid network connectivity by using an AWS Site-to-Site VPNconnection. A new governance policy requires logging for DNS traffic that originates in the AWS Cloud. The policy also requires the company to query DNS traffic to identify the source IP address of the resources that the query originated from, along with the DNS name that was requested. Which solution will meet these requirements?
 
 - [ ] Create VPC flow logs for all VPCs. Send the logs to Amazon CloudWatch Logs. Use CloudWatch Logs Insights to query the IP address and DNS name.
